@@ -1,19 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-"""
-Information Retrieval Project 1
-Web Crawling and Indexing
-
-Student: D R M Ludwick
-
-This project consists of two sections:
-1. Web Crawling
-2. Indexing
-"""
-
-
-
 # IMPORT LIBRARIES
 # ============================================================
 
