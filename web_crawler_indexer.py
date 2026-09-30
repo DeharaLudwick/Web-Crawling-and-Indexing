@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# IMPORT LIBRARIES
-# ============================================================
+# IMPORT LIBRARIES ============================================================
 
 import os
 import time
@@ -18,8 +17,7 @@ import nltk
 from nltk.stem import PorterStemmer
 from nltk.corpus import stopwords
 
-# SECTION 01: WEB CRAWLING
-# ============================================================
+# SECTION 01: WEB CRAWLING ============================================================
 
 SEED_URL = "https://www.wearetenet.com"
 
@@ -41,8 +39,6 @@ BASE_DOMAIN = parsed_seed.netloc
 
 
 # URL VALIDATION
-# ------------------------------------------------------------
-
 def is_valid_url(url):
     """
     Check whether a URL is valid for crawling.
@@ -63,8 +59,6 @@ def is_valid_url(url):
 
 
 # FILE NAME CLEANING
-# ------------------------------------------------------------
-
 def clean_filename(url):
     """
     Convert a URL into a filename that can safely
@@ -75,8 +69,6 @@ def clean_filename(url):
 
 
 # INITIALIZE CRAWLER
-# ------------------------------------------------------------
-
 visited_urls = set()
 
 url_queued = deque([SEED_URL])
@@ -85,8 +77,6 @@ page_count = 0
 
 
 # CRAWLING LOOP
-# ------------------------------------------------------------
-
 while url_queued and page_count < MAX_PAGES:
 
     # Get the next URL from the queue
@@ -174,8 +164,6 @@ while url_queued and page_count < MAX_PAGES:
 
 
 # CRAWLING RESULTS
-# ------------------------------------------------------------
-
 print("\nCrawling completed.")
 
 print(
@@ -184,8 +172,7 @@ print(
 )
 
 
-# SECTION 02: INDEXING
-# ============================================================
+# SECTION 02: INDEXING ============================================================
 
 # Initialize the Porter Stemmer
 stemmer = PorterStemmer()
@@ -202,7 +189,6 @@ inv_index = defaultdict(list)
 
 
 # TOKENIZATION
-# ------------------------------------------------------------
 
 def tokenize(text):
     """
@@ -216,7 +202,6 @@ def tokenize(text):
 
 
 # NORMALIZATION
-# ------------------------------------------------------------
 
 def normalize(tokens):
     """
@@ -243,9 +228,7 @@ def normalize(tokens):
     return result
 
 
-# PROCESS CRAWLED DOCUMENTS
-# ------------------------------------------------------------
-
+# PROCESS CRAWLED DOCUMENT
 doc_id = 0
 
 
@@ -284,8 +267,6 @@ for filename in os.listdir(OUTPUT_DIR):
 
 
 # INDEXING RESULTS
-# ------------------------------------------------------------
-
 print(
     "Indexing complete"
 )
@@ -296,8 +277,7 @@ print(
 )
 
 
-# SAVE INVERTED INDEX
-# ============================================================
+# SAVE INVERTED INDEX ============================================================
 
 with open(
     "inverted_index.json",
