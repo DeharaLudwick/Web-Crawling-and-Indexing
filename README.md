@@ -1,9 +1,9 @@
 # Web Crawling and Indexing
 
-[![Python](https://img.shields.io/badge/Python-3776AB?logo=python\&logoColor=white)](https://www.python.org/)]
-[![Requests](https://img.shields.io/badge/Requests-HTTP%20Library-orange)]
-[![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-Web%20Scraping-green)]
-[![NLTK](https://img.shields.io/badge/NLTK-Natural%20Language%20Processing-blue)]
+[![Python](https://img.shields.io/badge/Python-3776AB?logo=python\&logoColor=white)](https://www.python.org/)
+![Requests](https://img.shields.io/badge/Requests-HTTP%20Library-orange)
+![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-Web%20Scraping-green)
+![NLTK](https://img.shields.io/badge/NLTK-Natural%20Language%20Processing-blue)]
 
 A Python based **Web Crawling and Information Retrieval project** 
 
